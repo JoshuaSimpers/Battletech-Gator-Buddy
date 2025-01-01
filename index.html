@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>G.A.T.O.R. BUDDY</title>
+    <script src="/app.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">G.A.T.O.R. BUDDY</a>
+    </header>
+    <main>
+        <div id="UI">
+            <div id="gatorData">
+                <ul id="gatorList">
+                    <li>
+                        <label for="skill">GUNNERY SKILL</label>
+                        <input id="skill" type="number" min="1" max="8" required size="1">
+                    </li>
+                    <li>
+                        <label for="attackerMovement">ATTACKER MOVEMENT MODIFIER</label>
+                        <select name="attack-move" id="attackerMovement">
+                            <option value="0">Stationary</option>
+                            <option value="1">Walked</option>
+                            <option value="2">Ran</option>
+                            <option value="3">Jumped</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="opponentMovement">TARGET MOVEMENT MODIFIER</label>
+                        <input id="opponentMovement" type="number" min="0" required>
+                    </li>
+                    <li>
+                        <h2>OTHER MODIFIERS</h2>
+                        <label for="tileYN">Are there any terrain tiles between you and your target?</label>
+                        <select id="tileYN">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </li>
+                    <li id="terrainModifierLight" class="hidden">
+                        <label for="lightTerrainNum">NUMBER OF LIGHT TERRAIN TILES</label>
+                        <input id="lightTerrainNum" type="number" min="0" required size="1">
+                    </li>
+                    <li id="terrainModifierHeavy" class="hidden">
+                        <label for="heavyTerrainNum">NUMBER OF HEAVY TERRAIN TILES</label>
+                        <input id="heavyTerrainNum" type="number" min="0" required size="1">
+                    </li>
+                    <li>
+                        <label for="weaponRange">WHAT RANGE IS YOUR WEAPON FIRING AT?</label>
+                        <select id="weaponRange">
+                            <option value="0">Short</option>
+                            <option value="2">Medium</option>
+                            <option value="4">Long</option>
+                        </select>
+                    </li>
+                </ul>
+                <button id="calculate">CALCULATE</button>
+            </div>
+            <h2 id="gatorValue">G.A.T.O.R. VALUE: <span id="output"></span></h2>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>
